@@ -1,0 +1,16 @@
+# Ignore the .env file containing sensitive API keys
+.env
+
+# Ignore Python compiled files
+*.pyc
+__pycache__/
+
+# Ignore log files
+*.log
+
+# If you're using a virtual environment, ignore it as well
+venv/
+.env/
+
+# Ignore Node.js dependencies if using Node.js
+node_modules/
