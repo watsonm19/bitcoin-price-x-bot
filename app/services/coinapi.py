@@ -45,7 +45,7 @@ async def fetch_bitcoin_price_at_year_start(api_key: str, currency: str = "USD")
 async def fetch_bitcoin_price_4_years_ago(api_key: str, currency: str = "USD") -> float:
     # Calculate the date 4 years ago from the current date
     four_years_ago_start = datetime.datetime.now() - datetime.timedelta(days=4*365)
-    # Adjust for leap years (simplified, consider more precise adjustments for production use)
+    # Remove microseconds
     four_years_ago_start = four_years_ago_start.replace(microsecond=0)
     
     start_date = four_years_ago_start.strftime('%Y-%m-%dT%H:%M:%S')
@@ -84,7 +84,7 @@ async def fetch_bitcoin_price_4_years_ago(api_key: str, currency: str = "USD") -
 async def fetch_bitcoin_price_8_years_ago(api_key: str, currency: str = "USD") -> float:
     # Calculate the date 4 years ago from the current date
     eight_years_ago_start = datetime.datetime.now() - datetime.timedelta(days=8*365)
-    # Adjust for leap years (simplified, consider more precise adjustments for production use)
+    # Remove microseconds
     eight_years_ago_start = eight_years_ago_start.replace(microsecond=0)
     
     start_date = eight_years_ago_start.strftime('%Y-%m-%dT%H:%M:%S')
@@ -123,7 +123,7 @@ async def fetch_bitcoin_price_8_years_ago(api_key: str, currency: str = "USD") -
 async def fetch_bitcoin_price_12_years_ago(api_key: str, currency: str = "USD") -> float:
     # Calculate the date 4 years ago from the current date
     twelve_years_ago_start = datetime.datetime.now() - datetime.timedelta(days=12*365)
-    # Adjust for leap years (simplified, consider more precise adjustments for production use)
+    # Remove microseconds
     twelve_years_ago_start = twelve_years_ago_start.replace(microsecond=0)
     
     start_date = twelve_years_ago_start.strftime('%Y-%m-%dT%H:%M:%S')
